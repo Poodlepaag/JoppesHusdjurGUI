@@ -41,11 +41,14 @@ namespace JoppesHusdjurGUI
         {
             Ball ball = (Ball)toyList.SelectedItem;
 
-            try
+            if (ball == null)
+            {
+                qualityBar.Value = 0;
+            }
+            else
             {
                 qualityBar.Value = ball.Quality();
             }
-            catch { }
             
             
         }
@@ -61,18 +64,22 @@ namespace JoppesHusdjurGUI
             }
             else if (toyList.SelectedItem == null)
             {
-                textBoxActivities.Text = "Ingen boll är vald! \r\n" +
-                                         "Markera en boll i listan och försök igen!";
+                textBoxActivities.Text = "Ingen boll är vald! Markera en boll i listan och försök igen!";
             }
             else
             {
                 qualityBar.Value = 0;
                 toyList.Items.Remove(toyList.SelectedItem);
-                textBoxActivities.Text = $"{ball} borttagen ur listan!";
+                textBoxActivities.Text += $"\r\n{ball} borttagen ur listan!";
             }
         }
 
-        private void toyList2_SelectedIndexChanged(object sender, EventArgs e)
+        private void textBoxActivities_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonAddAnimal_Click(object sender, EventArgs e)
         {
             
         }

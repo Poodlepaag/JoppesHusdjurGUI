@@ -5,7 +5,9 @@ using System.Text;
 
 namespace JoppesHusdjurGUI.Animals
 {
-    class Cat
+    class Cat : Animal
     {
+
+        public Cat
     }
 }
