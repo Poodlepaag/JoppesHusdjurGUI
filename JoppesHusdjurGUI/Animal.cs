@@ -8,6 +8,7 @@ namespace JoppesHusdjurGUI
 {
     class Animal
     {
+        protected int strength;
         protected int ageYears;
         protected int ageMonths;
         protected string name;
@@ -21,48 +22,67 @@ namespace JoppesHusdjurGUI
 
         public Animal(string _name)
         {
-            int _energyLevel = random.Next(0, 100);
-            int _happinessLevel = random.Next(0, 100);
-            int _hungerLevel = random.Next(0, 100);
-
-            energyLevel = _energyLevel;
-            happinessLevel = _happinessLevel;
-            hungerLevel = _hungerLevel;
+            energyLevel = random.Next(0, 100);
+            happinessLevel = random.Next(0, 100);
+            hungerLevel = random.Next(0, 100);
         }
 
-        public int GetEnergyLevel()
+        public int EnergyLevel
         {
-            return energyLevel;
+            get { return energyLevel; }
+            set { energyLevel = value; }
         }
 
-        public int GetHappinessLevel()
+        public int HappinessLevel
         {
-            return happinessLevel;
+            get { return happinessLevel; }
+            set { happinessLevel = value; }
         }
 
-        public int GetHungerLevel()
+        public int HungerLevel
         {
-            return hungerLevel;
+            get { return hungerLevel; }
+            set { hungerLevel = value; }
         }
 
-        public string GetName()
+        public string Name
         {
-            return name;
+            get { return name; }
+            set { name = value; }
         }
 
-        public string GetAge()
+        public string PrintAge()
         {
             return string.Format($"{ageYears} år och {ageMonths} månader");
         }
 
-        public string GetType()
+        public string Type
         {
-            return type;
+            get { return type; }
+            set { type = value; }
         }
 
-        public string GetFavoriteFood()
+        public string FavoriteFood
         {
-            return favoriteFood;
+            get { return favoriteFood; }
+            set { favoriteFood = value; }
+        }
+
+        public int Strength
+        {
+            get { return strength; }
+        }
+
+        public int AgeYears
+        {
+            get { return ageYears; }
+            set { ageYears = value; }
+        }
+
+        public int AgeMonths
+        {
+            get { return ageMonths; }
+            set { ageMonths = value; }
         }
 
         public override string ToString()

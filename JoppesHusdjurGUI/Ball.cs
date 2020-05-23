@@ -19,14 +19,15 @@ namespace JoppesHusdjurGUI
             quality = 10;
         }
 
+        public int Quality
+        {
+            get { return quality; }
+            set { quality = value; }
+        }
+
         public void LowerQuality(int lowerQualityWith)
         {
             quality = quality - lowerQualityWith;
-        }
-
-        public int Quality()
-        {
-            return quality;
         }
 
         public override string ToString()

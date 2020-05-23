@@ -11,6 +11,7 @@ namespace JoppesHusdjurGUI.Animals
 
         public Dog(string _name) : base (_name)
         {
+            strength = 3;
             ageYears = random.Next(1, 18);
             ageMonths = random.Next(0, 11);
             type = "Hund";

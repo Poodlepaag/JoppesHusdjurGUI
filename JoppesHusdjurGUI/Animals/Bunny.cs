@@ -11,6 +11,7 @@ namespace JoppesHusdjurGUI.Animals
 
         public Bunny(string _name) : base(_name)
         {
+            strength = 2;
             ageYears = random.Next(1, 18);
             ageMonths = random.Next(0, 11);
             type = "Kanin";

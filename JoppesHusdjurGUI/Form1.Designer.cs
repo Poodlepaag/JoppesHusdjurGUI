@@ -69,6 +69,7 @@
             this.labelDisplayName = new System.Windows.Forms.Label();
             this.labelDisplayAge = new System.Windows.Forms.Label();
             this.labelDisplayFavoriteFood = new System.Windows.Forms.Label();
+            this.buttonSaveGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonDog
@@ -288,6 +289,7 @@
             this.buttonPlay.TabIndex = 39;
             this.buttonPlay.Text = "Lek";
             this.buttonPlay.UseVisualStyleBackColor = false;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
             // buttonPet
             // 
@@ -300,6 +302,7 @@
             this.buttonPet.TabIndex = 40;
             this.buttonPet.Text = "Klappa";
             this.buttonPet.UseVisualStyleBackColor = false;
+            this.buttonPet.Click += new System.EventHandler(this.buttonPet_Click);
             // 
             // labelQuality
             // 
@@ -333,6 +336,7 @@
             this.textBoxActivities.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxActivities.Size = new System.Drawing.Size(331, 571);
             this.textBoxActivities.TabIndex = 45;
+            this.textBoxActivities.TabStop = false;
             this.textBoxActivities.TextChanged += new System.EventHandler(this.textBoxActivities_TextChanged);
             // 
             // labelActivities
@@ -377,6 +381,7 @@
             this.buttonFeed.TabIndex = 49;
             this.buttonFeed.Text = "Mata";
             this.buttonFeed.UseVisualStyleBackColor = false;
+            this.buttonFeed.Click += new System.EventHandler(this.buttonFeed_Click);
             // 
             // labelChooseFood
             // 
@@ -502,12 +507,26 @@
             this.labelDisplayFavoriteFood.Size = new System.Drawing.Size(0, 13);
             this.labelDisplayFavoriteFood.TabIndex = 63;
             // 
+            // buttonSaveGame
+            // 
+            this.buttonSaveGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonSaveGame.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.buttonSaveGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveGame.Location = new System.Drawing.Point(16, 501);
+            this.buttonSaveGame.Name = "buttonSaveGame";
+            this.buttonSaveGame.Size = new System.Drawing.Size(179, 36);
+            this.buttonSaveGame.TabIndex = 65;
+            this.buttonSaveGame.Text = "Spara till fil";
+            this.buttonSaveGame.UseVisualStyleBackColor = false;
+            this.buttonSaveGame.Click += new System.EventHandler(this.buttonSaveGame_Click);
+            // 
             // JoppesHusdjurGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1012, 625);
+            this.Controls.Add(this.buttonSaveGame);
             this.Controls.Add(this.labelDisplayFavoriteFood);
             this.Controls.Add(this.labelDisplayAge);
             this.Controls.Add(this.labelDisplayName);
@@ -600,6 +619,7 @@
         private System.Windows.Forms.Label labelDisplayName;
         private System.Windows.Forms.Label labelDisplayAge;
         private System.Windows.Forms.Label labelDisplayFavoriteFood;
+        private System.Windows.Forms.Button buttonSaveGame;
     }
 }
 

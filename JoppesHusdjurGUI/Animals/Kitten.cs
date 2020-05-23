@@ -11,6 +11,7 @@ namespace JoppesHusdjurGUI.Animals
 
         public Kitten(string _name) : base(_name)
         {
+            strength = 1;
             ageYears = 0;
             ageMonths = random.Next(0, 11);
             type = "Kattunge";
