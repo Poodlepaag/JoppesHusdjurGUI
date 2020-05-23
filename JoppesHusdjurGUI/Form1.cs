@@ -145,7 +145,7 @@ namespace JoppesHusdjurGUI
         {
             Animal dog = new Dog(chosenName);
             animalList.Items.Add(dog);
-            textBoxActivities.Text = $"\r\n{dog.Name} är tillagd i listan\r\n";
+            textBoxActivities.Text += $"\r\n{dog.Name} är tillagd i listan\r\n";
             chosenName = null;
             textBoxNameInput.Text = null;
             buttonDog.Enabled = false;
