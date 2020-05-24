@@ -393,6 +393,10 @@ namespace JoppesHusdjurGUI
             {
                 textBoxActivities.Text += $"\r\nDet finns inga djur att mata, lägg till ett djur och försök igen!\r\n";
             }
+            else if (animal == null)
+            {
+                textBoxActivities.Text += $"\r\nDu måste välja ett djur i listan först!\r\n";
+            }
             else if (animal.HungerLevel > 75)
             {
                 textBoxActivities.Text += $"\r\n{animal.Name} är inte hungrig och vill därför inte äta!\r\n";
