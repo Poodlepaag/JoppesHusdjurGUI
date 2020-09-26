@@ -84,7 +84,7 @@
             this.buttonDog.TabIndex = 0;
             this.buttonDog.Text = "Hund";
             this.buttonDog.UseVisualStyleBackColor = false;
-            this.buttonDog.Click += new System.EventHandler(this.buttonDog_Click);
+            this.buttonDog.Click += new System.EventHandler(this.ButtonDog_Click);
             // 
             // labelGetAnimal
             // 
@@ -108,7 +108,7 @@
             this.buttonPuppy.TabIndex = 7;
             this.buttonPuppy.Text = "Hundvalp";
             this.buttonPuppy.UseVisualStyleBackColor = false;
-            this.buttonPuppy.Click += new System.EventHandler(this.buttonPuppy_Click);
+            this.buttonPuppy.Click += new System.EventHandler(this.ButtonPuppy_Click);
             // 
             // buttonCat
             // 
@@ -122,7 +122,7 @@
             this.buttonCat.TabIndex = 8;
             this.buttonCat.Text = "Katt";
             this.buttonCat.UseVisualStyleBackColor = false;
-            this.buttonCat.Click += new System.EventHandler(this.buttonCat_Click);
+            this.buttonCat.Click += new System.EventHandler(this.ButtonCat_Click);
             // 
             // buttonKitten
             // 
@@ -136,7 +136,7 @@
             this.buttonKitten.TabIndex = 9;
             this.buttonKitten.Text = "Kattunge";
             this.buttonKitten.UseVisualStyleBackColor = false;
-            this.buttonKitten.Click += new System.EventHandler(this.buttonKitten_Click);
+            this.buttonKitten.Click += new System.EventHandler(this.ButtonKitten_Click);
             // 
             // buttonBunny
             // 
@@ -150,7 +150,7 @@
             this.buttonBunny.TabIndex = 10;
             this.buttonBunny.Text = "Kanin";
             this.buttonBunny.UseVisualStyleBackColor = false;
-            this.buttonBunny.Click += new System.EventHandler(this.buttonBunny_Click);
+            this.buttonBunny.Click += new System.EventHandler(this.ButtonBunny_Click);
             // 
             // buttonBabyBunny
             // 
@@ -164,7 +164,7 @@
             this.buttonBabyBunny.TabIndex = 11;
             this.buttonBabyBunny.Text = "Kaninunge";
             this.buttonBabyBunny.UseVisualStyleBackColor = false;
-            this.buttonBabyBunny.Click += new System.EventHandler(this.buttonBabyBunny_Click);
+            this.buttonBabyBunny.Click += new System.EventHandler(this.ButtonBabyBunny_Click);
             // 
             // labelHandleToys
             // 
@@ -185,7 +185,7 @@
             this.buttonAddToy.TabIndex = 18;
             this.buttonAddToy.Text = "Lägg till boll";
             this.buttonAddToy.UseVisualStyleBackColor = true;
-            this.buttonAddToy.Click += new System.EventHandler(this.buttonAddToy_Click);
+            this.buttonAddToy.Click += new System.EventHandler(this.ButtonAddToy_Click);
             // 
             // animalList
             // 
@@ -194,7 +194,7 @@
             this.animalList.Name = "animalList";
             this.animalList.Size = new System.Drawing.Size(131, 225);
             this.animalList.TabIndex = 20;
-            this.animalList.SelectedIndexChanged += new System.EventHandler(this.animalList_SelectedIndexChanged);
+            this.animalList.SelectedIndexChanged += new System.EventHandler(this.AnimalList_SelectedIndexChanged);
             // 
             // toyList
             // 
@@ -203,7 +203,7 @@
             this.toyList.Name = "toyList";
             this.toyList.Size = new System.Drawing.Size(131, 225);
             this.toyList.TabIndex = 23;
-            this.toyList.SelectedIndexChanged += new System.EventHandler(this.toyList_SelectedIndexChanged);
+            this.toyList.SelectedIndexChanged += new System.EventHandler(this.ToyList_SelectedIndexChanged);
             // 
             // buttonRemoveToy
             // 
@@ -215,7 +215,7 @@
             this.buttonRemoveToy.TabIndex = 26;
             this.buttonRemoveToy.Text = "Ta bort boll";
             this.buttonRemoveToy.UseVisualStyleBackColor = false;
-            this.buttonRemoveToy.Click += new System.EventHandler(this.buttonRemoveToy_Click);
+            this.buttonRemoveToy.Click += new System.EventHandler(this.ButtonRemoveToy_Click);
             // 
             // labelAvailableAnimals
             // 
@@ -289,7 +289,7 @@
             this.buttonPlay.TabIndex = 39;
             this.buttonPlay.Text = "Lek";
             this.buttonPlay.UseVisualStyleBackColor = false;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+            this.buttonPlay.Click += new System.EventHandler(this.ButtonPlay_Click);
             // 
             // buttonPet
             // 
@@ -302,7 +302,7 @@
             this.buttonPet.TabIndex = 40;
             this.buttonPet.Text = "Klappa";
             this.buttonPet.UseVisualStyleBackColor = false;
-            this.buttonPet.Click += new System.EventHandler(this.buttonPet_Click);
+            this.buttonPet.Click += new System.EventHandler(this.ButtonPet_Click);
             // 
             // labelQuality
             // 
@@ -321,7 +321,7 @@
             this.qualityBar.Name = "qualityBar";
             this.qualityBar.Size = new System.Drawing.Size(407, 23);
             this.qualityBar.TabIndex = 43;
-            this.qualityBar.ForeColorChanged += new System.EventHandler(this.toyList_SelectedIndexChanged);
+            this.qualityBar.ForeColorChanged += new System.EventHandler(this.ToyList_SelectedIndexChanged);
             // 
             // textBoxActivities
             // 
@@ -337,7 +337,7 @@
             this.textBoxActivities.Size = new System.Drawing.Size(331, 571);
             this.textBoxActivities.TabIndex = 45;
             this.textBoxActivities.TabStop = false;
-            this.textBoxActivities.TextChanged += new System.EventHandler(this.textBoxActivities_TextChanged);
+            this.textBoxActivities.TextChanged += new System.EventHandler(this.TextBoxActivities_TextChanged);
             // 
             // labelActivities
             // 
@@ -360,7 +360,7 @@
             this.buttonRemoveAnimal.TabIndex = 47;
             this.buttonRemoveAnimal.Text = "Ta bort djur";
             this.buttonRemoveAnimal.UseVisualStyleBackColor = false;
-            this.buttonRemoveAnimal.Click += new System.EventHandler(this.buttonRemoveAnimal_Click);
+            this.buttonRemoveAnimal.Click += new System.EventHandler(this.ButtonRemoveAnimal_Click);
             // 
             // foodList
             // 
@@ -381,7 +381,7 @@
             this.buttonFeed.TabIndex = 49;
             this.buttonFeed.Text = "Mata";
             this.buttonFeed.UseVisualStyleBackColor = false;
-            this.buttonFeed.Click += new System.EventHandler(this.buttonFeed_Click);
+            this.buttonFeed.Click += new System.EventHandler(this.ButtonFeed_Click);
             // 
             // labelChooseFood
             // 
@@ -404,7 +404,7 @@
             this.buttonQuit.TabIndex = 52;
             this.buttonQuit.Text = "Avsluta";
             this.buttonQuit.UseVisualStyleBackColor = false;
-            this.buttonQuit.Click += new System.EventHandler(this.buttonQuit_Click);
+            this.buttonQuit.Click += new System.EventHandler(this.ButtonQuit_Click);
             // 
             // label1
             // 
@@ -423,7 +423,7 @@
             this.textBoxNameInput.Size = new System.Drawing.Size(122, 20);
             this.textBoxNameInput.TabIndex = 54;
             this.textBoxNameInput.Text = "Ange namn..";
-            this.textBoxNameInput.Click += new System.EventHandler(this.textBoxNameInput_Click);
+            this.textBoxNameInput.Click += new System.EventHandler(this.TextBoxNameInput_Click);
             // 
             // buttonSaveName
             // 
@@ -433,7 +433,7 @@
             this.buttonSaveName.TabIndex = 55;
             this.buttonSaveName.Text = "Spara";
             this.buttonSaveName.UseVisualStyleBackColor = true;
-            this.buttonSaveName.Click += new System.EventHandler(this.buttonSaveName_Click);
+            this.buttonSaveName.Click += new System.EventHandler(this.ButtonSaveName_Click);
             // 
             // labelFavoriteFood
             // 
@@ -518,7 +518,7 @@
             this.buttonSaveGame.TabIndex = 65;
             this.buttonSaveGame.Text = "Spara till fil";
             this.buttonSaveGame.UseVisualStyleBackColor = false;
-            this.buttonSaveGame.Click += new System.EventHandler(this.buttonSaveGame_Click);
+            this.buttonSaveGame.Click += new System.EventHandler(this.ButtonSaveGame_Click);
             // 
             // JoppesHusdjurGUI
             // 

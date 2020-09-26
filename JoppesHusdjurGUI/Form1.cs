@@ -27,12 +27,12 @@ namespace JoppesHusdjurGUI
             foodList.Items.Add("Hö");
         }
 
-        private void buttonQuit_Click(object sender, EventArgs e)
+        private void ButtonQuit_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(1);
         }
 
-        private void buttonAddToy_Click(object sender, EventArgs e)
+        private void ButtonAddToy_Click(object sender, EventArgs e)
         {
             ballCount++;
             Ball ball = new Ball(ballCount);
@@ -40,7 +40,7 @@ namespace JoppesHusdjurGUI
             textBoxActivities.Text += $"\r\n{ball} tillagd!\r\n";
         }
 
-        private void toyList_SelectedIndexChanged(object sender, EventArgs e)
+        private void ToyList_SelectedIndexChanged(object sender, EventArgs e)
         {
             Ball ball = (Ball)toyList.SelectedItem;
 
@@ -54,7 +54,7 @@ namespace JoppesHusdjurGUI
             }
         }
 
-        private void buttonRemoveToy_Click(object sender, EventArgs e)
+        private void ButtonRemoveToy_Click(object sender, EventArgs e)
         {
 
             Ball ball = (Ball)toyList.SelectedItem;
@@ -75,7 +75,7 @@ namespace JoppesHusdjurGUI
             }
         }
 
-        private void buttonSaveName_Click(object sender, EventArgs e)
+        private void ButtonSaveName_Click(object sender, EventArgs e)
         {
             chosenName = textBoxNameInput.Text;
             buttonDog.Enabled = true;
@@ -86,7 +86,7 @@ namespace JoppesHusdjurGUI
             buttonBabyBunny.Enabled = true;
         }
 
-        private void animalList_SelectedIndexChanged(object sender, EventArgs e)
+        private void AnimalList_SelectedIndexChanged(object sender, EventArgs e)
         {
             Animal animal = (Animal)animalList.SelectedItem;
 
@@ -113,12 +113,12 @@ namespace JoppesHusdjurGUI
             }
         }
 
-        private void textBoxNameInput_Click(object sender, EventArgs e)
+        private void TextBoxNameInput_Click(object sender, EventArgs e)
         {
             textBoxNameInput.Text = null;
         }
 
-        private void buttonRemoveAnimal_Click(object sender, EventArgs e)
+        private void ButtonRemoveAnimal_Click(object sender, EventArgs e)
         {
             Animal animal = (Animal)animalList.SelectedItem;
 
@@ -140,7 +140,7 @@ namespace JoppesHusdjurGUI
             }
         }
 
-        private void buttonDog_Click(object sender, EventArgs e)
+        private void ButtonDog_Click(object sender, EventArgs e)
         {
             Animal dog = new Dog(chosenName);
             animalList.Items.Add(dog);
@@ -155,7 +155,7 @@ namespace JoppesHusdjurGUI
             buttonBabyBunny.Enabled = false;
         }
 
-        private void buttonPuppy_Click(object sender, EventArgs e)
+        private void ButtonPuppy_Click(object sender, EventArgs e)
         {
             Animal puppy = new Puppy(chosenName);
             animalList.Items.Add(puppy);
@@ -170,7 +170,7 @@ namespace JoppesHusdjurGUI
             buttonBabyBunny.Enabled = false;
         }
 
-        private void buttonCat_Click(object sender, EventArgs e)
+        private void ButtonCat_Click(object sender, EventArgs e)
         {
             Animal cat = new Cat(chosenName);
             animalList.Items.Add(cat);
@@ -185,7 +185,7 @@ namespace JoppesHusdjurGUI
             buttonBabyBunny.Enabled = false;
         }
 
-        private void buttonKitten_Click(object sender, EventArgs e)
+        private void ButtonKitten_Click(object sender, EventArgs e)
         {
             Animal kitten = new Kitten(chosenName);
             animalList.Items.Add(kitten);
@@ -200,7 +200,7 @@ namespace JoppesHusdjurGUI
             buttonBabyBunny.Enabled = false;
         }
 
-        private void buttonBunny_Click(object sender, EventArgs e)
+        private void ButtonBunny_Click(object sender, EventArgs e)
         {
             Animal bunny = new Bunny(chosenName);
             animalList.Items.Add(bunny);
@@ -215,7 +215,7 @@ namespace JoppesHusdjurGUI
             buttonBabyBunny.Enabled = false;
         }
 
-        private void buttonBabyBunny_Click(object sender, EventArgs e)
+        private void ButtonBabyBunny_Click(object sender, EventArgs e)
         {
             Animal babyBunny = new BabyBunny(chosenName);
             animalList.Items.Add(babyBunny);
@@ -230,7 +230,7 @@ namespace JoppesHusdjurGUI
             buttonBabyBunny.Enabled = false;
         }
 
-        private void buttonPet_Click(object sender, EventArgs e)
+        private void ButtonPet_Click(object sender, EventArgs e)
         {
             Animal animal = (Animal)animalList.SelectedItem;
 
@@ -245,9 +245,9 @@ namespace JoppesHusdjurGUI
             else
             {
                 textBoxActivities.Text += $"\r\n{animal.Name} njuter av att bli klappad!\r\n";
-                animal.HappinessLevel = animal.HappinessLevel + 15;
-                animal.EnergyLevel = animal.EnergyLevel + 15;
-                animal.HungerLevel = animal.HungerLevel - 10;
+                animal.HappinessLevel += 15;
+                animal.EnergyLevel += 15;
+                animal.HungerLevel -= 10;
                 StatusCheck();
                 InactiveStatusChange();
                 energyBar.Value = animal.EnergyLevel;
@@ -294,9 +294,9 @@ namespace JoppesHusdjurGUI
         {
             Animal animal = (Animal)animalList.SelectedItem;
 
-            animal.EnergyLevel = animal.EnergyLevel + 15;
-            animal.HappinessLevel = animal.HappinessLevel - 15;
-            animal.HungerLevel = animal.HungerLevel - 15;
+            animal.EnergyLevel += 15;
+            animal.HappinessLevel -= 15;
+            animal.HungerLevel -= 15;
             StatusCheck();
             energyBar.Value = animal.EnergyLevel;
             happinessBar.Value = animal.HappinessLevel;
@@ -311,22 +311,22 @@ namespace JoppesHusdjurGUI
 
                 if (animal != animalList.SelectedItem)
                 {
-                    animal.EnergyLevel = animal.EnergyLevel + 10;
-                    animal.HappinessLevel = animal.HappinessLevel - 15;
-                    animal.HungerLevel = animal.HungerLevel - 15;
+                    animal.EnergyLevel += 10;
+                    animal.HappinessLevel -= 15;
+                    animal.HungerLevel -= 15;
 
                     StatusCheck();
                 }
             }
         }
 
-        private void textBoxActivities_TextChanged(object sender, EventArgs e)
+        private void TextBoxActivities_TextChanged(object sender, EventArgs e)
         {
             textBoxActivities.SelectionStart = textBoxActivities.Text.Length;
             textBoxActivities.ScrollToCaret();
         }
 
-        private void buttonPlay_Click(object sender, EventArgs e)
+        private void ButtonPlay_Click(object sender, EventArgs e)
         {
             Animal animal = (Animal)animalList.SelectedItem;
             Ball ball = (Ball)toyList.SelectedItem;
@@ -366,9 +366,9 @@ namespace JoppesHusdjurGUI
             }
             else
             {
-                animal.HappinessLevel = animal.HappinessLevel + 15;
-                animal.EnergyLevel = animal.EnergyLevel - 15;
-                animal.HungerLevel = animal.HungerLevel - 15;
+                animal.HappinessLevel += 15;
+                animal.EnergyLevel -= 15;
+                animal.HungerLevel -= 15;
                 StatusCheck();
                 happinessBar.Value = animal.HappinessLevel;
                 energyBar.Value = animal.EnergyLevel;
@@ -383,7 +383,7 @@ namespace JoppesHusdjurGUI
             }
         }
 
-        private void buttonFeed_Click(object sender, EventArgs e)
+        private void ButtonFeed_Click(object sender, EventArgs e)
         {
             Animal animal = (Animal)animalList.SelectedItem;
 
@@ -420,7 +420,7 @@ namespace JoppesHusdjurGUI
             }
         }
 
-        private void buttonSaveGame_Click(object sender, EventArgs e)
+        private void ButtonSaveGame_Click(object sender, EventArgs e)
         {
             using (StreamWriter saveFile = new StreamWriter("SavedGame.txt", false))
             {
