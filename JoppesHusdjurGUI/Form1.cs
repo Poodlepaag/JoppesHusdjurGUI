@@ -38,7 +38,6 @@ namespace JoppesHusdjurGUI
             Ball ball = new Ball(ballCount);
             toyList.Items.Add(ball);
             textBoxActivities.Text += $"\r\n{ball} tillagd!\r\n";
-
         }
 
         private void toyList_SelectedIndexChanged(object sender, EventArgs e)
@@ -323,7 +322,6 @@ namespace JoppesHusdjurGUI
 
         private void textBoxActivities_TextChanged(object sender, EventArgs e)
         {
-
             textBoxActivities.SelectionStart = textBoxActivities.Text.Length;
             textBoxActivities.ScrollToCaret();
         }
@@ -349,6 +347,10 @@ namespace JoppesHusdjurGUI
             {
                 textBoxActivities.Text += $"\r\nBollen är sönder och går ej att leka med! Plocka gärna bort den ur listan!\r\n";
                 ActiveStatusChange();
+            }
+            else if (animalList.SelectedItem == null)
+            {
+                textBoxActivities.Text += $"\r\nVälj ett djur i listan!\r\n";
             }
             else if (animal.EnergyLevel < 25)
             {
